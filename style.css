@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+header {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.9))), url(./Images/Anshuman/header2.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url(./Images/Anshuman/header2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em;
+}
+
+header nav .logo h2 {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 600;
+  font-family: 'Cinzel Decorative', cursive;
+}
+
+header nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 1.25em;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  -webkit-transition: 350ms ease;
+  transition: 350ms ease;
+}
+
+header nav ul li a:hover {
+  background: #fff;
+  color: #000;
+  padding: .5em 1.5em;
+  border-radius: 150px;
+}
+
+header nav ul li #active {
+  background: #fff;
+  color: #000;
+  padding: .5em 1.7em;
+  border-radius: 150px;
+}
+
+header .wish {
+  width: 70vw;
+  position: relative;
+  top: 40%;
+  left: 50%;
+  text-align: center;
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+  color: #fff;
+}
+
+header .wish h1 {
+  font-size: 5vw;
+  margin-bottom: .351em;
+  line-height: 1.5;
+  font-family: 'Great Vibes', cursive;
+}
+
+header .wish #nickname {
+  color: #FABB51;
+}
+
+header .wish #nickname::before {
+  content: open-quote;
+  color: #ddd;
+  font-size: 1.2em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header .wish #nickname::after {
+  content: close-quote;
+  color: #ddd;
+  font-size: 1.2em;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header .wish p {
+  font-size: 1em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, html {
+  height: 100vh;
+  scroll-behavior: smooth;
+  overscroll-behavior: smooth;
+}
+
+p, a {
+  font-family: 'Baloo Bhaijaan 2', cursive;
+}
+
+img {
+  max-width: 100%;
+}
+
+.about-me {
+  background: #000;
+  color: #fff;
+  padding: 2em 3em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1em;
+  place-items: center;
+}
+
+.about-me .hero-image {
+  position: relative;
+}
+
+.about-me .hero-image img {
+  width: 700px;
+  height: 550px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.about-me .hero-image::after {
+  content: '';
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), color-stop(rgba(0, 0, 0, 0.5)), to(#333));
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5), #333);
+  position: absolute;
+  inset: 0;
+}
+
+.about-me .info {
+  position: relative;
+  right: 50px;
+}
+
+.about-me h1 {
+  margin-bottom: .51em;
+  font-size: 4vw;
+  color: #FABB51;
+}
+
+.gallery {
+  padding-top: 6em;
+  padding-right: 2em;
+  padding-left: 2em;
+}
+
+.gallery h2 {
+  text-align: center;
+  font-size: 3em;
+  font-weight: 100;
+}
+
+.underline {
+  position: relative;
+  margin-bottom: 3em;
+  margin-top: 1.5em;
+}
+
+.underline div {
+  background: #FABB51;
+  height: 2px;
+  width: 170px;
+  margin: auto;
+}
+
+.underline div:nth-child(2) {
+  width: 70px;
+  margin-top: 10px;
+}
+
+.gallery-images {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+  gap: 1em;
+}
+
+.gallery-images div img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  border-radius: 8px;
+}
+
+.gallery-images div img:hover {
+  -webkit-transform: perspective(1500px) translateZ(50px);
+          transform: perspective(1500px) translateZ(50px);
+}
+
+.gallery-images .one {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+}
+
+.gallery-images .three {
+  grid-row: 1/-1;
+  grid-column: 4/-1;
+}
+
+.moments {
+  padding: 3em 2em;
+}
+
+.moments h2 {
+  text-align: center;
+  font-size: 3em;
+  margin-top: 1em;
+}
+
+.moments .moment-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  place-items: center;
+  gap: 1em;
+}
+
+.moments .moment-container .moment {
+  position: relative;
+  -webkit-transition: 350ms ease;
+  transition: 350ms ease;
+}
+
+.moments .moment-container .moment::after {
+  content: '';
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.9)));
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+  inset: 0;
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.moments .moment-container .moment:hover::after {
+  content: '';
+  position: absolute;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.9)));
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+  inset: 0;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+.moments .moment-container .moment:hover p {
+  -webkit-transform: translateY(-50%) scale(1, 1);
+          transform: translateY(-50%) scale(1, 1);
+  z-index: 2;
+}
+
+.moments .moment-container .moment p {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%) scale(0, 1);
+          transform: translateY(-50%) scale(0, 1);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  font-size: .9em;
+  color: #fff;
+  text-align: center;
+}
+
+.moments .moment-container .moment img {
+  border-radius: 8px;
+}
+/*# sourceMappingURL=style.css.map */

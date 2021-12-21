@@ -1,0 +1,172 @@
+@import './header';
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    height: 100vh;
+    scroll-behavior: smooth;
+    overscroll-behavior: smooth;
+}
+
+p,a{
+    font-family: 'Baloo Bhaijaan 2', cursive;
+}
+
+
+img{
+    max-width: 100%;
+}
+
+.about-me{
+    background: #000;
+    color: #fff;
+    padding: 2em 3em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 1em;
+    place-items: center;
+    .hero-image{
+        position: relative;
+        img{
+            width: 700px;
+            height: 550px;
+            object-fit: cover;
+        }
+        &::after{
+            content: '';
+            background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.5),#333);
+            position: absolute;
+            inset: 0;
+        }
+    }
+    .info{
+        position: relative;
+        right: 50px;
+    }
+    h1{
+        margin-bottom: .51em;
+        font-size: 4vw;
+        color: #FABB51;
+
+    }
+}
+.gallery{
+    padding-top: 6em;
+    padding-right: 2em;
+    padding-left: 2em;
+    h2{
+        text-align: center;
+        font-size: 3em;
+        font-weight: 100;
+    }
+    
+}
+.underline{
+    position: relative;
+    margin-bottom: 3em;
+    margin-top: 1.5em;
+    div{
+        background: #FABB51;
+        height: 2px;
+        width: 170px;
+        margin: auto;
+        &:nth-child(2){
+            width: 70px;
+            margin-top: 10px;
+        }
+    }
+}
+
+.gallery-images{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1em;
+    div{
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit:cover;
+            transition: .2s ease;
+            transform-style: preserve-3d;
+            border-radius: 8px;
+            &:hover{
+                transform: perspective(1500px) translateZ(50px);
+            }
+        }
+    }
+    .one{
+        grid-column: 1/3;
+        grid-row: 1/3;
+    }
+    .three{
+        grid-row: 1/-1;
+        grid-column: 4/-1;
+    }
+    
+}
+
+.moments{
+    padding: 3em 2em;
+    h2{
+        text-align: center;
+        font-size: 3em;
+        margin-top: 1em;
+
+    }
+}
+
+.moments{
+    .moment-container{
+        display: grid;
+        grid-template-columns: repeat( auto-fit,minmax(200px,1fr));
+        place-items: center;
+        gap: 1em;
+        .moment{
+            position: relative;
+            transition: 350ms ease;
+            &::after{
+                content: '';
+                position: absolute;
+                background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9));
+                inset: 0;
+                transform: scale(0,1);
+                transition: .5s ease;
+                transform-origin: left;
+            }
+            &:hover::after{
+                content: '';
+                position: absolute;
+                background: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.9));
+                inset: 0;
+                transform: scale(1,1);
+            }
+            &:hover{
+                p{
+                    transform: translateY(-50%) scale(1,1);
+                    z-index: 2;
+                }
+            }
+            p{
+                width: 100%;
+position: absolute;
+top: 50%;
+transform: translateY(-50%) scale(0,1);
+transform-origin: right;
+transition: .5s ease;
+font-size: .9em;
+color: #fff;
+text-align: center;
+            }
+            img{
+                border-radius: 8px;
+            }
+        }
+    }
+
+}
