@@ -11,6 +11,10 @@ body,html{
     height: 100vh;
     scroll-behavior: smooth;
     overscroll-behavior: smooth;
+    background: #000;
+}
+h1,h2,h3{
+    font-family: 'Great Vibes', cursive;
 }
 
 p,a{
@@ -21,7 +25,21 @@ p,a{
 img{
     max-width: 100%;
 }
-
+.underline{
+    position: relative;
+    margin-bottom: 3em;
+    margin-top: 1.5em;
+    div{
+        background: #FABB51;
+        height: 2px;
+        width: 170px;
+        margin: auto;
+        &:nth-child(2){
+            width: 70px;
+            margin-top: 10px;
+        }
+    }
+}
 .about-me{
     background: #000;
     color: #fff;
@@ -50,7 +68,7 @@ img{
     }
     h1{
         margin-bottom: .51em;
-        font-size: 4vw;
+        font-size: 5vw;
         color: #FABB51;
 
     }
@@ -61,27 +79,13 @@ img{
     padding-left: 2em;
     h2{
         text-align: center;
-        font-size: 3em;
+        font-size: 4em;
         font-weight: 100;
+        font-family: 'Great Vibes', cursive;
+        color: #fff;
     }
     
 }
-.underline{
-    position: relative;
-    margin-bottom: 3em;
-    margin-top: 1.5em;
-    div{
-        background: #FABB51;
-        height: 2px;
-        width: 170px;
-        margin: auto;
-        &:nth-child(2){
-            width: 70px;
-            margin-top: 10px;
-        }
-    }
-}
-
 .gallery-images{
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -115,8 +119,10 @@ img{
     padding: 3em 2em;
     h2{
         text-align: center;
-        font-size: 3em;
+        font-size: 4em;
         margin-top: 1em;
+        color: #fff;
+        font-family: 'Great Vibes', cursive;
 
     }
 }
