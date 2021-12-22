@@ -74,6 +74,9 @@ img{
         color: #FABB51;
 
     }
+    #name{
+        color: #FABB51;
+    }
 }
 footer{
     background: #333;
@@ -89,7 +92,7 @@ footer{
     }
 }
 
-@media(max-width:700px){
+@media(max-width:650px){
     .about-me{
         display: grid;
     grid-template-columns: 1fr;
@@ -108,6 +111,10 @@ footer{
         }
         p{
             font-size: 80%;
+            
+        }
+        #name{
+            color: #FABB51;
         }
     }
     }

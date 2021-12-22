@@ -81,10 +81,20 @@ header .wish h1 {
   margin-bottom: .351em;
   line-height: 1.5;
   font-family: 'Great Vibes', cursive;
+  position: relative;
 }
 
 header .wish #nickname {
   color: #FABB51;
+  display: inline-block;
+  width: 0ch;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  vertical-align: middle;
+  -webkit-animation: type 3s steps(6) infinite;
+          animation: type 3s steps(6) infinite;
+  border-right: 5px solid #FABB51;
 }
 
 header .wish #nickname::before {
@@ -105,7 +115,7 @@ header .wish p {
   font-size: 1em;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   header nav .logo {
     width: 100%;
     display: -webkit-box;
@@ -173,17 +183,37 @@ header .wish p {
             transform: scale(1, 1);
   }
   header .wish {
-    top: 20%;
+    top: 30%;
     left: 50%;
-    -webkit-transform: translate(-50%, -20%);
-            transform: translate(-50%, -20%);
+    -webkit-transform: translate(-50%, -30%);
+            transform: translate(-50%, -30%);
   }
   header .wish h1 {
-    font-size: 2em;
+    font-size: 3em;
+  }
+  header .wish #nickname {
+    width: 7ch;
+    border: none;
+    overflow: visible;
+    white-space: normal;
+    top: 0;
   }
   header .wish p {
     font-size: 80%;
     margin-top: 2em;
+  }
+}
+
+@media (min-width: 700px) {
+  @-webkit-keyframes type {
+    to {
+      width: 9ch;
+    }
+  }
+  @keyframes type {
+    to {
+      width: 9ch;
+    }
   }
 }
 
@@ -420,6 +450,10 @@ img {
   color: #FABB51;
 }
 
+.about-me #name {
+  color: #FABB51;
+}
+
 footer {
   background: #333;
   text-align: center;
@@ -436,7 +470,7 @@ footer p a {
   color: #FABB51;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 650px) {
   .about-me {
     display: -ms-grid;
     display: grid;
@@ -457,6 +491,9 @@ footer p a {
   }
   .about-me .info p {
     font-size: 80%;
+  }
+  .about-me .info #name {
+    color: #FABB51;
   }
 }
 /*# sourceMappingURL=style.css.map */

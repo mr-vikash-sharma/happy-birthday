@@ -69,9 +69,18 @@ header{
             margin-bottom: .351em;
             line-height: 1.5;
             font-family: 'Great Vibes', cursive;
+            position: relative;
         }
         #nickname{
-            color: #FABB51; 
+            color: #FABB51;
+            display: inline-block;
+            width: 0ch;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            vertical-align: middle;
+            animation: type 3s steps(6) infinite; 
+            border-right: 5px solid #FABB51;
         }
 
         #nickname::before{
@@ -85,6 +94,7 @@ header{
             color: #ddd;
             font-size: 1.2em;
             font-family:Georgia, 'Times New Roman', Times, serif;
+            
         }
         p{
             font-size: 1em;
@@ -92,7 +102,7 @@ header{
     }
 }
 
-@media (max-width:650px){
+@media (max-width:700px){
 header{
     nav{
         .logo{
@@ -156,11 +166,19 @@ header{
 
 header{
     .wish{
-        top: 20%;
+        top: 30%;
         left: 50%;
-        transform: translate(-50%,-20%);
+        transform: translate(-50%,-30%);
         h1{
-            font-size: 2em;
+            font-size: 3em;
+            
+        }
+        #nickname{
+            width:7ch;
+            border: none;
+            overflow: visible;
+            white-space: normal;
+            top: 0;
         }
         p{
             font-size: 80%;
@@ -171,3 +189,11 @@ header{
 
 }
 
+@media(min-width:700px){
+    @keyframes type{
+        to{
+            width: 9ch;
+    
+        }
+    }
+}
