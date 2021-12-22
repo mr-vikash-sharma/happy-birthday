@@ -18,9 +18,13 @@ header{
                 font-size: 1.5em;
                 font-weight: 600;
                 font-family: 'Cinzel Decorative', cursive;
+                .menu{
+                    display: none;
+                }
             }
         }
         ul{
+            z-index: 2;
             li{
                 list-style: none;
                 display: inline-block;
@@ -87,3 +91,83 @@ header{
         }
     }
 }
+
+@media (max-width:650px){
+header{
+    nav{
+        .logo{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            h2{
+                font-size: 90%;
+            }
+            .menu{
+                height: 50px;
+                width: 50px;
+                background: url(./Images/menu.svg);
+                background-size: cover;
+                background-position: center;
+                z-index: 3;
+                filter: invert(1);
+                cursor: pointer;
+            }
+        }
+    }
+}
+header{
+    nav{
+        ul{
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: #FABB51;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transform: scale(0,1);
+            transform-origin: left;
+            transition: 350ms ease;
+li{
+    margin: 1em 0;
+}
+        }
+    }
+}
+header{
+    nav{
+        .logo{
+            .menu.active-menu{
+                background: url(./Images/delete.svg);
+                background-size: cover;
+                background-position: center;
+            }
+        }
+        ul.active-list{
+            transform: scale(1,1);
+        }
+    }
+}
+
+header{
+    .wish{
+        top: 20%;
+        left: 50%;
+        transform: translate(-50%,-20%);
+        h1{
+            font-size: 2em;
+        }
+        p{
+            font-size: 80%;
+            margin-top: 2em;
+        }
+    }
+}
+
+}
+
